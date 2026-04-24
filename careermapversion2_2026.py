@@ -1,4 +1,4 @@
-import streamlit as st
+﻿import streamlit as st
 
 # ----------------------------
 # App Config
@@ -38,169 +38,169 @@ CATEGORY_INFO = {
 }
 
 CAREER_OPTIONS = {
-    “analytical”: [“Software Developer”, “Data Scientist”, “Engineer”, “Research Scientist”, “Cybersecurity Analyst”],
-    “creative”: [“Graphic Designer”, “Writer”, “Filmmaker”, “UI/UX Designer”, “Game Designer”],
-    “social”: [“Psychologist”, “Teacher”, “Social Worker”, “Counselor”, “Nurse”],
-    “practical”: [“Mechanical Engineer”, “Electrician”, “Technician”, “Carpenter”, “Automotive Technician”],
-    “entrepreneurial”: [“Entrepreneur”, “Business Manager”, “Startup Founder”, “Marketing Specialist”, “Product Manager”],
-    “athlete”: [“Fitness Instructor”, “Physical Therapist”, “Coach”, “Sports Trainer”, “Athletic Director”]
+    "analytical": ["Software Developer", "Data Scientist", "Engineer", "Research Scientist", "Cybersecurity Analyst"],
+    "creative": ["Graphic Designer", "Writer", "Filmmaker", "UI/UX Designer", "Game Designer"],
+    "social": ["Psychologist", "Teacher", "Social Worker", "Counselor", "Nurse"],
+    "practical": ["Mechanical Engineer", "Electrician", "Technician", "Carpenter", "Automotive Technician"],
+    "entrepreneurial": ["Entrepreneur", "Business Manager", "Startup Founder", "Marketing Specialist", "Product Manager"],
+    "athlete": ["Fitness Instructor", "Physical Therapist", "Coach", "Sports Trainer", "Athletic Director"]
 }
 
 # Maps each career to recommended college majors + key high school prep courses
 CAREER_ROADMAP = {
-    “Software Developer”: {
-        “majors”: [“Computer Science”, “Software Engineering”, “Computer Engineering”],
-        “hs_prep”: [“AP Computer Science”, “AP Calculus”, “Statistics”],
-        “alt_paths”: [“Community college → transfer”, “Coding bootcamp + portfolio”],
+    "Software Developer": {
+        "majors": ["Computer Science", "Software Engineering", "Computer Engineering"],
+        "hs_prep": ["AP Computer Science", "AP Calculus", "Statistics"],
+        "alt_paths": ["Community college → transfer", "Coding bootcamp + portfolio"],
     },
-    “Data Scientist”: {
-        “majors”: [“Statistics”, “Data Science”, “Applied Mathematics”, “Computer Science”],
-        “hs_prep”: [“AP Statistics”, “AP Calculus”, “AP Computer Science”],
-        “alt_paths”: [“Online certificates (Coursera, DataCamp)”],
+    "Data Scientist": {
+        "majors": ["Statistics", "Data Science", "Applied Mathematics", "Computer Science"],
+        "hs_prep": ["AP Statistics", "AP Calculus", "AP Computer Science"],
+        "alt_paths": ["Online certificates (Coursera, DataCamp)"],
     },
-    “Engineer”: {
-        “majors”: [“Mechanical Engineering”, “Civil Engineering”, “Electrical Engineering”, “Chemical Engineering”],
-        “hs_prep”: [“AP Physics”, “AP Calculus”, “AP Chemistry”],
-        “alt_paths”: [“Engineering Technology (2-year) → B.S.”],
+    "Engineer": {
+        "majors": ["Mechanical Engineering", "Civil Engineering", "Electrical Engineering", "Chemical Engineering"],
+        "hs_prep": ["AP Physics", "AP Calculus", "AP Chemistry"],
+        "alt_paths": ["Engineering Technology (2-year) → B.S."],
     },
-    “Research Scientist”: {
-        “majors”: [“Biology”, “Chemistry”, “Physics”, “Neuroscience”, “Biochemistry”],
-        “hs_prep”: [“AP Biology”, “AP Chemistry”, “AP Physics”],
-        “alt_paths”: [“Research assistant in college → grad school”],
+    "Research Scientist": {
+        "majors": ["Biology", "Chemistry", "Physics", "Neuroscience", "Biochemistry"],
+        "hs_prep": ["AP Biology", "AP Chemistry", "AP Physics"],
+        "alt_paths": ["Research assistant in college → grad school"],
     },
-    “Cybersecurity Analyst”: {
-        “majors”: [“Cybersecurity”, “Computer Science”, “Information Systems”, “Network Engineering”],
-        “hs_prep”: [“AP Computer Science”, “Networking electives”, “AP Statistics”],
-        “alt_paths”: [“CompTIA Security+ cert”, “Associate degree + certifications”],
+    "Cybersecurity Analyst": {
+        "majors": ["Cybersecurity", "Computer Science", "Information Systems", "Network Engineering"],
+        "hs_prep": ["AP Computer Science", "Networking electives", "AP Statistics"],
+        "alt_paths": ["CompTIA Security+ cert", "Associate degree + certifications"],
     },
-    “Graphic Designer”: {
-        “majors”: [“Graphic Design”, “Visual Communication”, “Fine Arts”, “Illustration”],
-        “hs_prep”: [“Art”, “Digital Media”, “Photography”],
-        “alt_paths”: [“Portfolio school / design bootcamp”],
+    "Graphic Designer": {
+        "majors": ["Graphic Design", "Visual Communication", "Fine Arts", "Illustration"],
+        "hs_prep": ["Art", "Digital Media", "Photography"],
+        "alt_paths": ["Portfolio school / design bootcamp"],
     },
-    “Writer”: {
-        “majors”: [“English”, “Creative Writing”, “Journalism”, “Communications”],
-        “hs_prep”: [“AP English Language”, “AP English Literature”, “Journalism club”],
-        “alt_paths”: [“Self-publish / blog → freelance”],
+    "Writer": {
+        "majors": ["English", "Creative Writing", "Journalism", "Communications"],
+        "hs_prep": ["AP English Language", "AP English Literature", "Journalism club"],
+        "alt_paths": ["Self-publish / blog → freelance"],
     },
-    “Filmmaker”: {
-        “majors”: [“Film Production”, “Cinema Studies”, “Media Arts”, “Communications”],
-        “hs_prep”: [“Video Production”, “Photography”, “AP English”],
-        “alt_paths”: [“Film festival / YouTube portfolio”, “Community college film program”],
+    "Filmmaker": {
+        "majors": ["Film Production", "Cinema Studies", "Media Arts", "Communications"],
+        "hs_prep": ["Video Production", "Photography", "AP English"],
+        "alt_paths": ["Film festival / YouTube portfolio", "Community college film program"],
     },
-    “UI/UX Designer”: {
-        “majors”: [“Human-Computer Interaction”, “Graphic Design”, “Psychology”, “Computer Science”],
-        “hs_prep”: [“Art”, “AP Computer Science”, “Psychology”],
-        “alt_paths”: [“Google UX Design Certificate (Coursera)”, “Design bootcamp”],
+    "UI/UX Designer": {
+        "majors": ["Human-Computer Interaction", "Graphic Design", "Psychology", "Computer Science"],
+        "hs_prep": ["Art", "AP Computer Science", "Psychology"],
+        "alt_paths": ["Google UX Design Certificate (Coursera)", "Design bootcamp"],
     },
-    “Game Designer”: {
-        “majors”: [“Game Design”, “Computer Science”, “Digital Media”, “Interactive Media”],
-        “hs_prep”: [“AP Computer Science”, “Art”, “Digital Media”],
-        “alt_paths”: [“Build indie games → portfolio”, “Modding communities”],
+    "Game Designer": {
+        "majors": ["Game Design", "Computer Science", "Digital Media", "Interactive Media"],
+        "hs_prep": ["AP Computer Science", "Art", "Digital Media"],
+        "alt_paths": ["Build indie games → portfolio", "Modding communities"],
     },
-    “Psychologist”: {
-        “majors”: [“Psychology”, “Neuroscience”, “Behavioral Science”],
-        “hs_prep”: [“AP Psychology”, “AP Biology”, “Statistics”],
-        “alt_paths”: [“B.A. Psychology → M.S./Ph.D. required for licensure”],
+    "Psychologist": {
+        "majors": ["Psychology", "Neuroscience", "Behavioral Science"],
+        "hs_prep": ["AP Psychology", "AP Biology", "Statistics"],
+        "alt_paths": ["B.A. Psychology → M.S./Ph.D. required for licensure"],
     },
-    “Teacher”: {
-        “majors”: [“Education”, “Subject-specific B.A./B.S. + Teaching Credential”],
-        “hs_prep”: [“AP courses in your subject area”, “Tutoring / volunteering”],
-        “alt_paths”: [“Teach For America (post-grad)”, “Alternative certification programs”],
+    "Teacher": {
+        "majors": ["Education", "Subject-specific B.A./B.S. + Teaching Credential"],
+        "hs_prep": ["AP courses in your subject area", "Tutoring / volunteering"],
+        "alt_paths": ["Teach For America (post-grad)", "Alternative certification programs"],
     },
-    “Social Worker”: {
-        “majors”: [“Social Work (BSW)”, “Sociology”, “Human Services”, “Psychology”],
-        “hs_prep”: [“AP Psychology”, “Sociology”, “Volunteering”],
-        “alt_paths”: [“BSW → MSW for clinical licensure”],
+    "Social Worker": {
+        "majors": ["Social Work (BSW)", "Sociology", "Human Services", "Psychology"],
+        "hs_prep": ["AP Psychology", "Sociology", "Volunteering"],
+        "alt_paths": ["BSW → MSW for clinical licensure"],
     },
-    “Counselor”: {
-        “majors”: [“Counseling”, “Psychology”, “Social Work”, “Human Development”],
-        “hs_prep”: [“AP Psychology”, “Speech / Communication”, “Volunteering”],
-        “alt_paths”: [“B.A. Psychology → M.S. Counseling (required for licensure)”],
+    "Counselor": {
+        "majors": ["Counseling", "Psychology", "Social Work", "Human Development"],
+        "hs_prep": ["AP Psychology", "Speech / Communication", "Volunteering"],
+        "alt_paths": ["B.A. Psychology → M.S. Counseling (required for licensure)"],
     },
-    “Nurse”: {
-        “majors”: [“Nursing (BSN)”, “Biology + Pre-nursing”, “Health Sciences”],
-        “hs_prep”: [“AP Biology”, “AP Chemistry”, “Health Science elective”],
-        “alt_paths”: [“ADN (2-year) → bridge to BSN”, “CNA while in school”],
+    "Nurse": {
+        "majors": ["Nursing (BSN)", "Biology + Pre-nursing", "Health Sciences"],
+        "hs_prep": ["AP Biology", "AP Chemistry", "Health Science elective"],
+        "alt_paths": ["ADN (2-year) → bridge to BSN", "CNA while in school"],
     },
-    “Mechanical Engineer”: {
-        “majors”: [“Mechanical Engineering”, “Industrial Engineering”, “Aerospace Engineering”],
-        “hs_prep”: [“AP Physics”, “AP Calculus”, “AP Chemistry”],
-        “alt_paths”: [“Engineering Technology A.A.S. → B.S.”],
+    "Mechanical Engineer": {
+        "majors": ["Mechanical Engineering", "Industrial Engineering", "Aerospace Engineering"],
+        "hs_prep": ["AP Physics", "AP Calculus", "AP Chemistry"],
+        "alt_paths": ["Engineering Technology A.A.S. → B.S."],
     },
-    “Electrician”: {
-        “majors”: [“Electrical Technology (A.A.S.)”, “Electrical Engineering Technology”],
-        “hs_prep”: [“Physics”, “Shop/Trade electives”, “Math through Pre-Calc”],
-        “alt_paths”: [“Apprenticeship programs (IBEW)”, “Trade/vocational school”],
+    "Electrician": {
+        "majors": ["Electrical Technology (A.A.S.)", "Electrical Engineering Technology"],
+        "hs_prep": ["Physics", "Shop/Trade electives", "Math through Pre-Calc"],
+        "alt_paths": ["Apprenticeship programs (IBEW)", "Trade/vocational school"],
     },
-    “Technician”: {
-        “majors”: [“Electronics Technology”, “Computer Technology”, “Industrial Technology”],
-        “hs_prep”: [“Physics”, “Shop electives”, “AP Computer Science”],
-        “alt_paths”: [“Trade school / associate degree”, “Manufacturer certifications”],
+    "Technician": {
+        "majors": ["Electronics Technology", "Computer Technology", "Industrial Technology"],
+        "hs_prep": ["Physics", "Shop electives", "AP Computer Science"],
+        "alt_paths": ["Trade school / associate degree", "Manufacturer certifications"],
     },
-    “Carpenter”: {
-        “majors”: [“Construction Management”, “Architecture”, “Building Technology”],
-        “hs_prep”: [“Shop / Wood Tech”, “Geometry”, “Technical Drawing”],
-        “alt_paths”: [“Apprenticeship (United Brotherhood of Carpenters)”, “Trade school”],
+    "Carpenter": {
+        "majors": ["Construction Management", "Architecture", "Building Technology"],
+        "hs_prep": ["Shop / Wood Tech", "Geometry", "Technical Drawing"],
+        "alt_paths": ["Apprenticeship (United Brotherhood of Carpenters)", "Trade school"],
     },
-    “Automotive Technician”: {
-        “majors”: [“Automotive Technology (A.A.S.)”, “Mechanical Engineering Technology”],
-        “hs_prep”: [“Auto shop elective”, “Physics”, “Math”],
-        “alt_paths”: [“ASE Certification”, “Manufacturer training programs (Toyota, BMW)”],
+    "Automotive Technician": {
+        "majors": ["Automotive Technology (A.A.S.)", "Mechanical Engineering Technology"],
+        "hs_prep": ["Auto shop elective", "Physics", "Math"],
+        "alt_paths": ["ASE Certification", "Manufacturer training programs (Toyota, BMW)"],
     },
-    “Entrepreneur”: {
-        “majors”: [“Entrepreneurship”, “Business Administration”, “Innovation & Design”],
-        “hs_prep”: [“Business electives”, “AP Economics”, “DECA / FBLA clubs”],
-        “alt_paths”: [“Start a side project now”, “Incubator programs”, “Self-taught + network”],
+    "Entrepreneur": {
+        "majors": ["Entrepreneurship", "Business Administration", "Innovation & Design"],
+        "hs_prep": ["Business electives", "AP Economics", "DECA / FBLA clubs"],
+        "alt_paths": ["Start a side project now", "Incubator programs", "Self-taught + network"],
     },
-    “Business Manager”: {
-        “majors”: [“Business Administration (BBA)”, “Management”, “Organizational Leadership”],
-        “hs_prep”: [“AP Economics”, “AP Statistics”, “Business electives”],
-        “alt_paths”: [“Start in sales/ops → MBA later”],
+    "Business Manager": {
+        "majors": ["Business Administration (BBA)", "Management", "Organizational Leadership"],
+        "hs_prep": ["AP Economics", "AP Statistics", "Business electives"],
+        "alt_paths": ["Start in sales/ops → MBA later"],
     },
-    “Startup Founder”: {
-        “majors”: [“Computer Science”, “Business”, “Engineering”, “Any field with a problem to solve”],
-        “hs_prep”: [“AP Computer Science”, “Economics”, “Any technical elective”],
-        “alt_paths”: [“Y Combinator / accelerators”, “Build while in school”],
+    "Startup Founder": {
+        "majors": ["Computer Science", "Business", "Engineering", "Any field with a problem to solve"],
+        "hs_prep": ["AP Computer Science", "Economics", "Any technical elective"],
+        "alt_paths": ["Y Combinator / accelerators", "Build while in school"],
     },
-    “Marketing Specialist”: {
-        “majors”: [“Marketing”, “Communications”, “Business”, “Psychology”],
-        “hs_prep”: [“AP English”, “Economics”, “Art / Digital Media”],
-        “alt_paths”: [“Google Digital Marketing Certificate”, “Build social media projects”],
+    "Marketing Specialist": {
+        "majors": ["Marketing", "Communications", "Business", "Psychology"],
+        "hs_prep": ["AP English", "Economics", "Art / Digital Media"],
+        "alt_paths": ["Google Digital Marketing Certificate", "Build social media projects"],
     },
-    “Product Manager”: {
-        “majors”: [“Business”, “Computer Science”, “Psychology”, “Human-Computer Interaction”],
-        “hs_prep”: [“AP Computer Science”, “AP Statistics”, “Business electives”],
-        “alt_paths”: [“Start as engineer/designer → move to PM”, “PM bootcamps”],
+    "Product Manager": {
+        "majors": ["Business", "Computer Science", "Psychology", "Human-Computer Interaction"],
+        "hs_prep": ["AP Computer Science", "AP Statistics", "Business electives"],
+        "alt_paths": ["Start as engineer/designer → move to PM", "PM bootcamps"],
     },
-    “Fitness Instructor”: {
-        “majors”: [“Kinesiology”, “Exercise Science”, “Physical Education”],
-        “hs_prep”: [“PE”, “Biology”, “Health Science”],
-        “alt_paths”: [“NASM / ACE personal trainer cert”, “Associate degree + cert”],
+    "Fitness Instructor": {
+        "majors": ["Kinesiology", "Exercise Science", "Physical Education"],
+        "hs_prep": ["PE", "Biology", "Health Science"],
+        "alt_paths": ["NASM / ACE personal trainer cert", "Associate degree + cert"],
     },
-    “Physical Therapist”: {
-        “majors”: [“Kinesiology”, “Exercise Science”, “Biology”, “Pre-PT (any science B.S.)”],
-        “hs_prep”: [“AP Biology”, “AP Chemistry”, “AP Physics”, “Volunteering at PT clinic”],
-        “alt_paths”: [“B.S. → Doctor of Physical Therapy (DPT) required”],
+    "Physical Therapist": {
+        "majors": ["Kinesiology", "Exercise Science", "Biology", "Pre-PT (any science B.S.)"],
+        "hs_prep": ["AP Biology", "AP Chemistry", "AP Physics", "Volunteering at PT clinic"],
+        "alt_paths": ["B.S. → Doctor of Physical Therapy (DPT) required"],
     },
-    “Coach”: {
-        “majors”: [“Kinesiology”, “Sports Management”, “Physical Education”, “Psychology”],
-        “hs_prep”: [“PE”, “Health”, “AP Psychology”],
-        “alt_paths”: [“Play at college level”, “Volunteer coaching → paid positions”],
+    "Coach": {
+        "majors": ["Kinesiology", "Sports Management", "Physical Education", "Psychology"],
+        "hs_prep": ["PE", "Health", "AP Psychology"],
+        "alt_paths": ["Play at college level", "Volunteer coaching → paid positions"],
     },
-    “Sports Trainer”: {
-        “majors”: [“Athletic Training (B.S.)”, “Kinesiology”, “Exercise Science”],
-        “hs_prep”: [“AP Biology”, “PE”, “Health Science”],
-        “alt_paths”: [“Athletic Training → BOC Exam for certification”],
+    "Sports Trainer": {
+        "majors": ["Athletic Training (B.S.)", "Kinesiology", "Exercise Science"],
+        "hs_prep": ["AP Biology", "PE", "Health Science"],
+        "alt_paths": ["Athletic Training → BOC Exam for certification"],
     },
-    “Athletic Director”: {
-        “majors”: [“Sports Management”, “Business Administration”, “Physical Education”],
-        “hs_prep”: [“Business electives”, “AP Economics”, “Leadership roles”],
-        “alt_paths”: [“Coach / administrator experience → AD role”],
+    "Athletic Director": {
+        "majors": ["Sports Management", "Business Administration", "Physical Education"],
+        "hs_prep": ["Business electives", "AP Economics", "Leadership roles"],
+        "alt_paths": ["Coach / administrator experience → AD role"],
     },
 }
 
-# Use a 1–5 rating instead of only Yes/No (more accurate + feels more “assessment-like”)
+# Use a 1–5 rating instead of only Yes/No (more accurate + feels more "assessment-like")
 QUESTIONS = [
     {"question": "I enjoy solving puzzles or math problems.", "weights": {"analytical": 2}},
     {"question": "I enjoy sports, physical games, or working out.", "weights": {"athlete": 2}},
@@ -208,7 +208,7 @@ QUESTIONS = [
     {"question": "I like helping others and talking to people.", "weights": {"social": 2}},
     {"question": "I enjoy working with tools or fixing things.", "weights": {"practical": 2}},
     {"question": "I dream of starting my own business one day.", "weights": {"entrepreneurial": 2}},
-    {"question": "I’m curious about science/research and how the world works.", "weights": {"analytical": 1}},
+    {"question": "I'm curious about science/research and how the world works.", "weights": {"analytical": 1}},
     {"question": "I express myself through music, art, writing, or design.", "weights": {"creative": 1}},
     {"question": "I like teaching, coaching, or mentoring others.", "weights": {"social": 1}},
     {"question": "I enjoy learning about how machines/electronics work.", "weights": {"practical": 1}},
@@ -287,15 +287,15 @@ def compute_results():
 init_state()
 
 st.title("🧭 Career Pathfinder")
-st.caption("A quick strengths quiz for high school students — discover what you’re naturally good at and careers to explore.")
+st.caption("A quick strengths quiz for high school students — discover what you're naturally good at and careers to explore.")
 
 if not st.session_state.started:
     st.markdown(
         """
         **How it works**
-        - You’ll rate a few statements (1–5).
-        - We’ll estimate your strongest interest areas.
-        - You’ll get career ideas + next steps.
+        - You'll rate a few statements (1–5).
+        - We'll estimate your strongest interest areas.
+        - You'll get career ideas + next steps.
         """
     )
     colA, colB = st.columns(2)
@@ -415,7 +415,7 @@ else:
         else:
             st.info(f"Confidence: {confidence}/6 — This reflects how separated your top score is from the next score.")
 
-        st.subheader(‘✅ Next Steps (so it\’s a real “career map”)’)
+        st.subheader('✅ Next Steps (so it\'s a real "career map")')
         st.markdown(
             """
             Pick **one** career from your top area and do:

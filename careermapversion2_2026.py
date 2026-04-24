@@ -415,7 +415,7 @@ else:
         else:
             st.info(f"Confidence: {confidence}/6 — This reflects how separated your top score is from the next score.")
 
-        st.subheader("✅ Next Steps (so it’s a real “career map”)")
+        st.subheader(‘✅ Next Steps (so it\’s a real “career map”)’)
         st.markdown(
             """
             Pick **one** career from your top area and do:
